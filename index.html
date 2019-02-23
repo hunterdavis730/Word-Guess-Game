@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="Assets/game.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 bg-dark py-3">
+                <h1 class="text-warning text-center">Lord of The Rings Word Guess Game</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 d-flex justify-content-center bg-transparent">
+                <h4 class="text-center text-light py-3">- Press any letter to start! -</h4>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card bg-dark" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Wins: </h5>
+                        <p class="card-text text-warning" id="guesses-left">Guesses Left: </p>
+
+                        <p class="card-text text-warning">Letters Guessed so Far: </p>
+                        <p class="card-text text-warning" id="currentGuesses"></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center mt-2">
+                <div class="mt-5" id="imgWin">
+                    <img src="https://via.placeholder.com/200" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 bg-dark text-center pb-2">
+                <p class="text-warning py-3">Current Word</p>
+                <p class="text-warning text-center" id="currentChar"></p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+</html>
