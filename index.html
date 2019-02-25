@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
     <link rel="stylesheet" href="Assets/style.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="Assets/game.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -33,7 +35,8 @@
                 <div class="card bg-dark" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title text-warning">Wins: </h5>
-                        <p class="card-text text-warning" id="guesses-left">Guesses Left: </p>
+                        <p class="card-text text-warning">Guesses Left: <span id="guesses-left" class="card-text text-warning"></span>
+                        </p>
 
                         <p class="card-text text-warning">Letters Guessed so Far: </p>
                         <p class="card-text text-warning" id="currentGuesses"></p>
@@ -50,7 +53,7 @@
         <div class="row mt-5">
             <div class="col-md-1"></div>
             <div class="col-md-10 bg-dark text-center pb-2">
-                <p class="text-warning py-3">Current Word</p>
+                <p class="text-warning pt-3">Current Word</p>
                 <p class="text-warning text-center" id="currentChar"></p>
             </div>
 
