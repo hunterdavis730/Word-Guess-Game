@@ -9,7 +9,6 @@ var userGuess = '';
 // 
 
 
-// frodo, boromir,  
 
 
 // Game stored in an object 
@@ -28,8 +27,10 @@ var wordGame = {
         'treebeard',
         'gimli'
     ],
+
+
     isLetter: false,
-    isWord: false,
+    guessedWord: false,
     currentWord: '',
     wordReady: [],
     currentGuesses: [],
@@ -41,7 +42,7 @@ var wordGame = {
     selectCharacter: function () {
         var randChar = Math.floor(Math.random() * this.characters.length);
 
-        this.isWord = true;
+
         return wordGame.currentWord = this.characters[randChar];
 
     },
@@ -68,6 +69,86 @@ var wordGame = {
 
 
         }
+    },
+
+    displayImg: function () {
+        if (this.guessedWord === true && this.currentWord === 'gandalf') {
+
+            $('#imgWin').append('<img id="gandalf" src="Assets/Images/gandalf.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+        if (this.guessedWord === true && this.currentWord === 'frodo') {
+
+            $('#imgWin').append('<img id="frodo" src="Assets/Images/frodo.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+        if (this.guessedWord === true && this.currentWord === 'legolas') {
+
+            $('#imgWin').append('<img id="legolas" src="Assets/Images/legolas.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+        if (this.guessedWord === true && this.currentWord === 'aragorn') {
+
+            $('#imgWin').append('<img id="aragorn" src="Assets/Images/aragorn.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+        if (this.guessedWord === true && this.currentWord === 'saruman') {
+
+            $('#imgWin').append('<img id="saruman" src="Assets/Images/Saruman.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+        if (this.guessedWord === true && this.currentWord === 'boromir') {
+
+            $('#imgWin').append('<img id="boromir" src="Assets/Images/boromir.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+        if (this.guessedWord === true && this.currentWord === 'sauron') {
+
+            $('#imgWin').append('<img id="sauron" src="Assets/Images/sauron.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+        if (this.guessedWord === true && this.currentWord === 'gollum') {
+
+            $('#imgWin').append('<img id="gollum" src="Assets/Images/gollum.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+        if (this.guessedWord === true && this.currentWord === 'balrog') {
+
+            $('#imgWin').append('<img id="balrog" src="Assets/Images/balrog.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+        if (this.guessedWord === true && this.currentWord === 'theoden') {
+
+            $('#imgWin').append('<img id="theoden" src="Assets/Images/theoden.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+        if (this.guessedWord === true && this.currentWord === 'treebeard') {
+
+            $('#imgWin').append('<img id="treebeard" src="Assets/Images/treebeard.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+        if (this.guessedWord === true && this.currentWord === 'gimli') {
+
+            $('#imgWin').append('<img id="gimli" src="Assets/Images/gimli.jpeg" style="width: 250px; height: 250px;"/>')
+            $('#imgWin').prepend('<h3 class="text-center text-white">' + this.currentWord.toUpperCase() + '</h3>')
+            $('#game-inst').text('-You Win! Click the image to get a new word!-')
+        }
+
+    },
+
+    removeImg: function () {
+        $('#imgWin').empty();
     },
 
     displayLines: function () {
@@ -100,7 +181,7 @@ var wordGame = {
         }
     },
 
-    // aragorn, boromir, treebeard
+
 
 
     displayLetter: function (event) {
@@ -259,12 +340,15 @@ var wordGame = {
 
     addWin: function () {
         this.wins++;
+        this.currentGuesses = [];
+        this.guessedWord = true;
         this.wordReady = [];
         this.wordComp = [];
     },
 
 
     resetGame: function () {
+        this.guessedWord = false;
         this.wordReady = [];
         $("#currentChar").empty();
         this.guessesLeft = 8;
@@ -306,15 +390,15 @@ $(document).ready(function () {
             alert('Please Enter A Valid Key');
         }
 
-        if (wordGame.currentWord.includes(userGuess)) {
+        if (wordGame.currentWord.includes(userGuess) && !wordGame.wordComp.includes(userGuess)) {
 
             wordGame.displayLetter(userGuess);
             console.log(wordGame.currentGuesses)
 
 
-        } else if (!wordGame.currentGuesses.includes(userGuess)) {
+        } else if (!wordGame.currentGuesses.includes(userGuess) && !wordGame.wordComp.includes(userGuess)) {
             wordGame.currentGuesses.push(userGuess.toString());
-            $('#currentGuesses').text(wordGame.currentGuesses);
+            $('#currentGuesses').text(wordGame.currentGuesses.join(', '));
             wordGame.incorrectGuess();
             wordGame.showGuesses();
         } else {
@@ -328,13 +412,16 @@ $(document).ready(function () {
         if (wordGame.wordReady.length === wordGame.wordComp.length) {
             wordGame.addWin();
             wordGame.showWins();
+
+            console.log(wordGame.currentWord)
+            wordGame.displayImg();
             var winGame = true;
         }
 
-        if (winGame) {
-            var gameOver = true;
+        // if (winGame) {
+        //     var gameOver = true;
 
-        }
+        // }
 
         if (gameOver) {
             wordGame.resetGame();
@@ -348,5 +435,14 @@ $(document).ready(function () {
 
 
 
+    })
+    $('#imgWin').on("click", function () {
+        $('#game-inst').text('- Press any letter to start! -')
+        wordGame.removeImg();
+        wordGame.resetGame();
+        wordGame.selectCharacter();
+        wordGame.showGuesses();
+        wordGame.addWord();
+        wordGame.displayLines();
     })
 });
