@@ -373,7 +373,7 @@ $(document).ready(function () {
     wordGame.selectCharacter();
     wordGame.showGuesses();
     wordGame.showWins();
-
+    $('#currentGuesses').text(wordGame.currentGuesses.join(', '));
 
     wordGame.addWord();
 
@@ -425,6 +425,7 @@ $(document).ready(function () {
 
         if (gameOver) {
             wordGame.resetGame();
+            $('#currentGuesses').text(wordGame.currentGuesses.join(', '));
             wordGame.selectCharacter();
             wordGame.showGuesses();
             wordGame.addWord();
@@ -440,6 +441,7 @@ $(document).ready(function () {
         $('#game-inst').text('- Press any letter to start! -')
         wordGame.removeImg();
         wordGame.resetGame();
+        $('#currentGuesses').text(wordGame.currentGuesses.join(', '));
         wordGame.selectCharacter();
         wordGame.showGuesses();
         wordGame.addWord();
